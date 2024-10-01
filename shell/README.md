@@ -1,3 +1,3 @@
 # WIP
 
-Layl for Unix Systems
+Shell for Qamar-Linux
