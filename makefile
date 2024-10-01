@@ -1,15 +1,18 @@
 all:
-	cd shell && make
 	cd linux && make -j 20
+	cd qminit && cmake . && make
+	cd shell && cmake . && make
+
+
 	@if [ ! -d setup ]; then \
 		mkdir -p setup; \
 	fi
-	cp linux/arch/x86/boot/bzImage setup/bzImage
-	cp shell/shell init
-	echo init | cpio -o -H newc > setup/init.cpio
-	chmod +r setup/bzImage setup/init.cpio
-	chmod +r setup/init.cpio
-	qemu-system-x86_64 -kernel setup/bzImage -initrd setup/init.cpio -serial stdio
+	cp linux/arch/x86/boot/bzImage bzImage
+	cp shell/shell setup/shell
+	cp qminit/init setup/init
+	cd setup && find . | cpio -o -H newc > ../init.cpio
+	chmod +r bzImage init.cpio
+	qemu-system-x86_64 -kernel bzImage -initrd init.cpio -serial stdio
 
 
 
@@ -19,11 +22,15 @@ kernel-menu-config:
 
 clean:
 	rm -rf setup
-	rm init
 	cd shell && make clean
+	cd qminit && make clean
+	rm bzImage
+	rm init.cpio
+	
+
 
 clean-all:
 	rm -rf setup
-	rm init
 	cd linux && make clean
 	cd shell && make clean
+	cd qminit && make clean

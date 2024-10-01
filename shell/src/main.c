@@ -3,8 +3,8 @@
 
 
 int main(int argc, char* argv[]){
-    printf("\033[H\033[J");
-    printf("Qamar Linux Build %f\n", VER);
+    sleep(1);
+    printf("\nQamar Shell Build DEBUG\n\n");
     check_respective_shell_state(argv[1]);
     return 0;
 }

@@ -1,4 +1,7 @@
-layl/layl
+shell/shell
 init
+qminit/init
 setup/
 arch/
+bzImage
+init.cpio
