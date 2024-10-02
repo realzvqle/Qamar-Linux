@@ -1,6 +1,7 @@
 #include "cmdexecutor.h"
 #include "dirio.h"
 #include "fileio.h"
+#include "misc.h"
 #include "power.h"
 
 
@@ -54,6 +55,11 @@ void execute_commands(int index, data* data){
             if(!data->arg) break;
             power_mgmt(data->arg);
             break;
+        case 11:
+            print_flag();
+            printf("\nQamar Linux Build IN DEVELOPMENT\n\nCopyright zvqle\n");
+            break;
+                          
         default:
             printf("%s has been found, but no implemnation has been found\n", data->cmd);
             break;

@@ -8,7 +8,8 @@
 
 
 static char* cmds[] = {"echo", "cd", "exit", "dir", "clear", "mkdir", 
-                      "rmdir", "fcreate", "fwrite", "fread", "power"};
+                      "rmdir", "fcreate", "fwrite", "fread", "power",
+                      "about"};
 
 
 
