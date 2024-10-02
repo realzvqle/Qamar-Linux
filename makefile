@@ -27,6 +27,7 @@ clean:
 	rm -rf setup
 	cd shell && make clean
 	cd qminit && make clean
+	cd qve && make clean
 	rm bzImage
 	rm init.cpio
 	
@@ -37,3 +38,7 @@ clean-all:
 	cd linux && make clean
 	cd shell && make clean
 	cd qminit && make clean
+	cd qve && make clean
+	rm bzImage
+	rm init.cpio
+
