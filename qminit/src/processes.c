@@ -1,6 +1,6 @@
 #include "processes.h"
 #include <sys/wait.h>
-
+#include <linux/reboot.h>
 
 
 bool create_process(char* args[]){

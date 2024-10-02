@@ -7,12 +7,12 @@ bool create_process(char* args[]){
     int pid = fork();  
     if (pid < 0) {
         perror("Fork failed");  
-        return 1;
+        return false;
     }
     if (pid == 0) {  
         execv(args[0], args); 
         //perror("execv failed"); 
-        return 1;
+        return false;
     } else {  
         int status;
         waitpid(pid, &status, 0);  

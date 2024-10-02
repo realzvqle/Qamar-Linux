@@ -2,14 +2,16 @@ all:
 	cd linux && make -j 20
 	cd qminit && cmake . && make
 	cd shell && cmake . && make
+	cd qve && cmake . && make
+
 	@if [ ! -d setup ]; then \
 		mkdir -p setup; \
 	fi
 	rm -rf setup/bin
-
 	mkdir setup/bin
 	cp linux/arch/x86/boot/bzImage bzImage
 	cp shell/shell setup/bin/shell
+	cp qve/qve setup/bin/qve
 	cp qminit/init setup/init
 	cd setup && find . | cpio -o -H newc > ../init.cpio
 	chmod +r bzImage init.cpio

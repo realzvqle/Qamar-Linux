@@ -26,7 +26,7 @@ void process_commands(data* data){
     
     char** argv = parse_str_to_argv(data->cmd, data->arg);
 
-    int result = create_process(argv);
-    if(result == 1) perror("create_process failed");
+    bool result = create_process(argv);
+    if(!result) perror("create_process failed");
     free(argv);
 }

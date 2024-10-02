@@ -65,6 +65,7 @@
 #include <string.h>
 #include <sys/syscall.h>
 #include <stdbool.h>
+#include <linux/reboot.h>
 
 
 #define VER 0.00000
