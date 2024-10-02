@@ -5,8 +5,9 @@ all:
 	@if [ ! -d setup ]; then \
 		mkdir -p setup; \
 	fi
+	mkdir setup/bin
 	cp linux/arch/x86/boot/bzImage bzImage
-	cp shell/shell setup/shell
+	cp shell/shell setup/bin/shell
 	cp qminit/init setup/init
 	cd setup && find . | cpio -o -H newc > ../init.cpio
 	chmod +r bzImage init.cpio
