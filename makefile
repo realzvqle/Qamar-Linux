@@ -5,6 +5,8 @@ all:
 	@if [ ! -d setup ]; then \
 		mkdir -p setup; \
 	fi
+	rm -rf setup/bin
+
 	mkdir setup/bin
 	cp linux/arch/x86/boot/bzImage bzImage
 	cp shell/shell setup/bin/shell
