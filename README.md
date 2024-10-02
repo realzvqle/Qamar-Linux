@@ -1,5 +1,7 @@
 
-<img src="res/qamarlogo.png" alt="qamar logo" width="90" height="90">
+<div align="center">
+    <img src="res/qamarlogo.png" alt="qamar logo" width="90" height="90">
+</div>
 
 
 # Qamar-Linux
