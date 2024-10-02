@@ -41,7 +41,8 @@ static inline void start_file_reader(char* argument){
 
 
 static inline void start_shell(){
-    FILE* fp = fopen("~/.config/layl/config.lys", "r");
+    // will write an INI parser soon =)
+    FILE* fp = fopen("/config/shellconf.ini", "r");
     if(!fp){
         goto SKIP_CONFIGURATION;
     }

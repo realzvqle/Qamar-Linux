@@ -2,8 +2,6 @@ all:
 	cd linux && make -j 20
 	cd qminit && cmake . && make
 	cd shell && cmake . && make
-
-
 	@if [ ! -d setup ]; then \
 		mkdir -p setup; \
 	fi
