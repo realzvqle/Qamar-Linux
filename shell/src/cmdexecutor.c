@@ -1,6 +1,7 @@
 #include "cmdexecutor.h"
 #include "dirio.h"
 #include "fileio.h"
+#include "power.h"
 
 
 
@@ -48,6 +49,10 @@ void execute_commands(int index, data* data){
         case 9:
             if(!data->arg) break;
             read_file(data->arg);
+            break;
+        case 10:
+            if(!data->arg) break;
+            power_mgmt(data->arg);
             break;
         default:
             printf("%s has been found, but no implemnation has been found\n", data->cmd);

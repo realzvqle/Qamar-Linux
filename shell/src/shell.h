@@ -64,7 +64,8 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <ctype.h>
-
+#include <linux/reboot.h> 
+#include <sys/syscall.h>
 
 #define VER 0.000000
 typedef struct _data{
