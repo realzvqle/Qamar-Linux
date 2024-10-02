@@ -1,5 +1,5 @@
 
-![qamar logo](res/qamarlogo.png =90x90 "Logo" )
+![qamar logo]("res/qamarlogo.png" =90x90)
 # Qamar-Linux
 
 A Small Linux Distrubution Im Working on
