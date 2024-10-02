@@ -64,6 +64,11 @@
 #include <fcntl.h>
 #include <string.h>
 #include <sys/syscall.h>
+#include <stdbool.h>
+
+
+#define VER 0.00000
+
 
 
 #endif
