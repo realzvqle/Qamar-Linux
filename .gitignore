@@ -5,3 +5,4 @@ setup/
 arch/
 bzImage
 init.cpio
+limine/

@@ -41,4 +41,3 @@ clean-all:
 	cd qve && make clean
 	rm bzImage
 	rm init.cpio
-
